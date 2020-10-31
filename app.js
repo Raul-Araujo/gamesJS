@@ -67,7 +67,7 @@ function createBoard() {
         let card = document.createElement('img');
         card.setAttribute('src', 'images/cover.jpg');
         card.setAttribute('data-id', i);
-        card.addEventListener('click', flipCard());
+        card.addEventListener('click', flipCard;
         grid.appendChild(card)
     }
 }
@@ -93,7 +93,7 @@ function checkForMatch(){
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length;
-    
+
     if(cardsWon.length === cardArray.length/2){
         resultDisplay.textContent = 'Congrats! you have gotten all them!';
     }
@@ -113,7 +113,7 @@ function flipCard(){
     this.setAttribute('src', cardArray[cardId].img)
 
     if (cardsChosen.length === 2){
-        setTimeout(checkForMatch(), 500)
+        setTimeout(checkForMatch, 500)
     }
 
 }
