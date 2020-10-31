@@ -1,4 +1,4 @@
-document.addEventListener('load', () => {
+document.addEventListener('click', () => {
     
     const cardArray = [
         {
