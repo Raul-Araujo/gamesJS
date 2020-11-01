@@ -3,51 +3,51 @@
     const cardArray = [
         {
             name: 'kirk',
-            img: 'images/kirk.jpg'
+            img: 'assets/images/kirk.jpg'
         },
         {
             name: 'kirk',
-            img: 'images/kirk.jpg'
+            img: 'assets/images/kirk.jpg'
         },
         {
             name: 'enterprise',
-            img: 'images/enterprise.jpg'
+            img: 'assets/images/enterprise.jpg'
         },
         {
             name: 'enterprise',
-            img: 'images/enterprise.jpg'
+            img: 'assets/images/enterprise.jpg'
         },
         {
             name: 'piccard',
-            img: 'images/piccard.jpg'
+            img: 'assets/images/piccard.jpg'
         },
         {
             name: 'piccard',
-            img: 'images/piccard.jpg'
+            img: 'assets/images/piccard.jpg'
         },
         {
             name: 'spokAndKirk',
-            img: 'images/spokAndKirk.jpg'
+            img: 'assets/images/spokAndKirk.jpg'
         },
         {
             name: 'spokAndKirk',
-            img: 'images/spokAndKirk.jpg'
+            img: 'assets/images/spokAndKirk.jpg'
         },
         {
             name: 'starTrek',
-            img: 'images/starTrek.jpg'
+            img: 'assets/images/starTrek.jpg'
         },
         {
             name: 'starTrek',
-            img: 'images/starTrek.jpg'
+            img: 'assets/images/starTrek.jpg'
         },
         {
             name: 'starTrekBeyond',
-            img: 'images/starTrekBeyond.jpg'
+            img: 'assets/images/starTrekBeyond.jpg'
         },
         {
             name: 'starTrekBeyond',
-            img: 'images/starTrekBeyond.jpg'
+            img: 'assets/images/starTrekBeyond.jpg'
         }
     ]
 
@@ -67,7 +67,7 @@ let cardsWon = []
 function createBoard() {
     for(let i = 0; i < cardArray.length; i++){
         let card = document.createElement('img');
-        card.setAttribute('src', 'images/cover.jpg');
+        card.setAttribute('src', 'assets/images/cover.jpg');
         card.setAttribute('data-id', i);
         card.addEventListener('click', flipCard);
         grid.appendChild(card)
@@ -84,12 +84,12 @@ function checkForMatch(){
     const optionTwoId = cardsChosenId[1]
 
     if(cardsChosen[0] === cardsChosen[1]){
-        cards[optionOneId].setAttribute('src', 'images/coverBlank.png')
-        cards[optionTwoId].setAttribute('src', 'images/coverBlank.png')
+        cards[optionOneId].setAttribute('src', 'assets/images/coverBlank.png')
+        cards[optionTwoId].setAttribute('src', 'assets/images/coverBlank.png')
         cardsWon.push(cardsChosen)
     } else {
-        cards[optionOneId].setAttribute('src', 'images/cover.jpg')
-        cards[optionTwoId].setAttribute('src', 'images/cover.jpg')
+        cards[optionOneId].setAttribute('src', 'assets/images/cover.jpg')
+        cards[optionTwoId].setAttribute('src', 'assets/images/cover.jpg')
     }
     cardsChosen = []
     cardsChosenId = []
