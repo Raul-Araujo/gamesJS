@@ -66,7 +66,7 @@ let cardsWon = []
 //creating the board
 function createBoard() {
     for(let i = 0; i < cardArray.length; i++){
-        var card = document.createElement('img');
+        let card = document.createElement('img');
         card.setAttribute('src', 'images/cover.jpg');
         card.setAttribute('data-id', i);
         card.addEventListener('click', flipCard);
@@ -79,26 +79,24 @@ function createBoard() {
     
     
 function checkForMatch(){
-    var cards = document.querySelectorAll('img')
+    let cards = document.querySelectorAll('img')
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
 
-    if(cardsChosenId[0] === cardsChosenId[1]){
-        alert('You are damn right!')
+    if(cardsChosen[0] === cardsChosen[1]){
         cards[optionOneId].setAttribute('src', 'images/coverBlank.png')
         cards[optionTwoId].setAttribute('src', 'images/coverBlank.png')
         cardsWon.push(cardsChosen)
     } else {
         cards[optionOneId].setAttribute('src', 'images/cover.jpg')
         cards[optionTwoId].setAttribute('src', 'images/cover.jpg')
-        alert('Wrrrooooong!!!! Try Again!')
     }
     cardsChosen = []
     cardsChosenId = []
     resultDisplay.textContent = cardsWon.length;
 
     if(cardsWon.length === cardArray.length/2){
-        resultDisplay.textContent = 'Congrats! you have gotten all them!';
+        resultDisplay.textContent = 'Congrats! you have gotten all of them!';
     }
 }
 
@@ -110,13 +108,13 @@ function checkForMatch(){
 //flipping card function
 
 function flipCard(){
-    var cardId = this.getAttribute('data-id')
+    let cardId = this.getAttribute('data-id')
     cardsChosen.push(cardArray[cardId].name)
     cardsChosenId.push(cardId)
     this.setAttribute('src', cardArray[cardId].img)
 
     if (cardsChosen.length === 2){
-        setTimeout(checkForMatch, 500)
+        setTimeout(checkForMatch, 1500)
     }
 
 }
