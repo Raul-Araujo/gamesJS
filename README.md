@@ -1,0 +1,1 @@
+This is a repo, to creating some JavaScript games ang get use to manipulating the DOM and with JS language. I'm a beginner and my practicing.
