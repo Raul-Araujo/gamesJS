@@ -18,14 +18,16 @@ function randomSquare(){
     hitPosition = randomPosition.id;
 }
 
-square.forEach(){
+square.forEach(id => {
     id.addEventListener('mouseup', () => {
         if(id.id === hitPosition){
             result++;
             score.textContent = result;
         }
     })
-}
+}) 
+    
+
 
 function moveMole(){
     let timerId = null;
